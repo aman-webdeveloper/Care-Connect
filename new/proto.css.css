@@ -1,0 +1,574 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&family=Domine:wght@500;600&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Libre+Baskerville&family=Merriweather&family=Mukta:wght@400;500&family=Roboto+Condensed:ital@1&family=Roboto+Mono:wght@100&family=Roboto:wght@500&family=Signika&family=Ubuntu+Condensed&family=Ubuntu+Mono&family=Ubuntu:wght@400;500&family=Uchen&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+main {
+  height: 100vh;
+  width: 100wh;
+  background-image: linear-gradient(100deg,#404040 0%,#00000000 100%),
+  url("https://cdn.pixabay.com/photo/2017/03/14/03/20/woman-2141808_1280.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+}
+li a {
+  padding-left: 40px;
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+ background-color: #222f3d;
+ height: 40px;
+ border-radius: 10px;
+ margin: 20px;
+}
+ul img {
+  padding-left: 40px;
+  padding-top: 40px;
+  height: 85px;
+}
+
+li {
+  list-style: none;
+  padding-top: 50px;
+  font-weight: bold;
+}
+
+@media (min-width: 100px) and (max-width: 800px) {
+  main {
+    padding: 0;
+    margin: 0;
+    /* background-position:  ; */
+    height: fit-content;
+    width: fit-content;
+    background-image: linear-gradient(100deg, #404040 0%, #00000000 100%),
+     url("https://cdn.pixabay.com/photo/2017/03/14/03/20/woman-2141808_1280.jpg");
+    height: 500px;
+    background-size: cover;
+    /* background-size: contain; */
+
+  }
+  ul img {
+    padding-left: 10px;
+    padding-top: 25px;
+    height: 60px;
+  }
+  li a {
+    padding-left: 4px;
+    font-size: 2px;
+    padding-top: 5px;
+  }
+  li {
+    padding-top: 20px;
+    padding-left: 2px;
+  }
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.head {
+  font-size: 2.5em;
+  padding-left: 60px;
+  padding-top: 60px;
+  color: #ffffff;
+}
+
+.buttons {
+  font-size: 70px;
+  position: relative;
+  left: 60px;
+  bottom: 15px;
+  padding-left: 0px;
+}
+.off {
+  position: relative;
+  left: 60px;
+  top: 20px;
+  font-size: 40px;
+  color: white;
+}
+.one {
+  background-color: white;
+  border: 1px solid white;
+  padding: 10px;
+}
+.two {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid white;
+  font-weight: 700;
+  padding: 10px;
+}
+
+@media (min-width: 200px) and (max-width: 800px) {
+  .head {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    right: 32px;
+    top: 24px;
+  }
+  .off {
+    font-size: 18px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* main section end */
+
+.everything {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.box {
+  height: 450px;
+  width: 450px;
+  background-color: aqua;
+  margin: 27px;
+}
+
+@media (min-width: 800px) and (max-width: 1400px) {
+  .everything {
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 440px) {
+}
+
+#box-1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+    url("https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  height: 550px;
+  width: 500px;
+}
+
+#box-2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+    url("men-fashion-free-img.jpg");
+  height: 550px;
+  width: 500px;
+  background-size: cover;
+}
+
+#box-3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)),
+    url("women.png");
+  height: 550px;
+  width: 500px;
+  background-size: cover;
+}
+
+@media (min-width: 200px) and (max-width: 800px) {
+  .everything {
+    flex-wrap: wrap;
+  }
+}
+.under {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 25px;
+}
+span {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+@media (min-width: 200px) and (max-width: 800px) {
+  span {
+    font-size: 10px;
+    font-weight: 800;
+  }
+}
+
+.box h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 330px;
+  font-size: 35px;
+  color: white;
+}
+
+.box p {
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: 350px;
+  left: 15px;
+  right: 10px;
+  justify-content: center;
+  font-size: 20px;
+  padding: auto;
+  margin: auto;
+  color: white;
+}
+.box .shop-now {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 360px;
+  font-size: 20px;
+  color: black;
+  padding: 15px;
+  width: 250px;
+  margin: auto;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+@media (min-width: 200px) and (max-width: 400px) {
+  #box-1 {
+    background-color: red;
+    position: relative;
+    height: 600px;
+  }
+
+  .box h2 {
+    position: relative;
+    top: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+  .box p {
+    position: relative;
+    top: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+}
+
+/* 2nd page fnished */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#Dp {
+  box-shadow: 10px 10px rgb(172, 184, 187);
+  height: 305px;
+  width: 305px;
+  border-radius: 12px;
+}
+
+.feautred-heading {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 40px;
+}
+.feautred-heading:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.profile-pic h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #0f1111 !important;
+}
+.profile-pic h3 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.profile-pic p {
+  margin-bottom: 30px;
+}
+
+/* 4th page coding form here */
+
+.main-sec2 { 
+  height: 100vh;
+  width: 100%;
+ background: linear-gradient(100deg,#000000 0%,#00000000 100%),url("https://cdn.pixabay.com/photo/2014/12/10/20/56/medical-563427_640.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (min-width: 200px) and (max-width: 700px){
+  .main-sec2{
+    background-image: url(https://img.freepik.com/free-photo/attractive-man-wearing-flip-flops-hat-looking-away-isolated_171337-16787.jpg?size=626&ext=jpg&ga=GA1.1.632798143.1705449600&semt=ais);
+  }
+}
+
+
+
+.content-part2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.head-2 {
+  font-size: 2.5rem;
+  padding-left: 60px;
+  padding-top: 60px;
+  color: white;
+  position: relative;
+  top: 30px;
+}
+
+.head-2 p {
+  font-size: 5.2rem;
+  color: white;
+}
+
+.buttons {
+  font-size: 70px;
+  position: relative;
+  left: 60px;
+  bottom: 15px;
+  padding-left: 0px;
+}
+.off-2 {
+  position: relative;
+  left: 60px;
+  top: 40px;
+  font-size: 3rem;
+  color: white;
+}
+
+.off-2 h1 {
+  font-size: 3rem;
+}
+.one-1 {
+  background-color: white;
+  border: 1px solid white;
+  padding: 10px;
+}
+.two-2 {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid white;
+  font-weight: 700;
+  padding: 10px;
+}
+
+.text-part {
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 65px;
+  left: 50px;
+  font-size: 1.8rem;
+}
+.text-part p {
+  font-size: 1.8rem;
+}
+
+@media (min-width: 200px) and (max-width: 800px) {
+  .head-2 {
+    font-size: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content-part2 {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    right: 32px;
+    top: 24px;
+  }
+  
+  .off-2 h1 {
+    font-size: 2rem;
+  }
+  .head-2 p {
+    font-size: 3rem;
+    color: black;
+  }
+  .text-part p {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.3rem;
+    position: relative;
+    left: 12px;
+  }
+}
+.click-here {
+  position: relative;
+  top: 100px;
+  left: 65px;
+  padding: 20px;
+  font-size: 1em;
+  font-weight: 800;
+  width: 170px;
+}
+
+/* sale sale section */
+
+.sale-sale h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+hr{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-top: 1px solid black;
+}
+
+/* footer */
+
+
+footer{
+  margin-top: 15px;
+}
+
+
+.foot-panel-1{
+  background-color: #222f3d;
+  color: white;
+  height: 400px;
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+.foot-panel- .ul-footer h4{
+  position: relative;
+    top: 10px;
+    display: flex;
+    font-size: 2rem;
+    right: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul-footer a {
+  font-size: 1rem;
+}
+.ul-footer p {
+  font-size: 2rem;
+}
+.ul-footer .follow{
+  font-size: 2rem;
+  position: relative;
+  top: 30px;
+}
+.social-media{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  top: 10px;
+}
+
+.ul-footer{
+  margin-top: 30px;
+}
+
+ul a{
+  display: block;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  color: #dddddd;
+}
+
+
+
+.logo{
+  background-image: url("amazon_logo.png");
+  background-size: cover;
+}
+
+.foot-panel-2{
+  background-color: #0f1111;
+  color: white;
+  height: 50px;
+  text-align: center;
+ 
+}
+
+.pages{
+  font-size: 0.7rem;
+  padding-top: 25px;
+}
+.pages a{
+  font-size: 1.3rem;
+}
+
+.copyright{
+  font-size: 0.7rem;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.copyright a{
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+@media (min-width: 200px) and (max-width: 800px){
+  .foot-panel-1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #222f3d;
+    font-size: 1rem;
+  }
+  .sale-sale h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+   
+  }
+  .ul-footer img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    left: 40px;
+  }
+}

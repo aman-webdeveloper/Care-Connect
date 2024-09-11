@@ -1,0 +1,761 @@
+/* Basic Reset */
+@import "bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+/* here we added links for fonts  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Garamond, sans-serif;
+}
+
+/*⭐ Main Section Starts ⭐*/
+main {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(100deg, #404040 0%, #00000000 100%),
+    url("https://cdn.pixabay.com/photo/2017/03/14/03/20/woman-2141808_1280.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+}
+.logo img {
+  height: 85px;
+  width: 95px;
+  cursor: pointer;
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  background-color: var(--color2);
+  padding: 12px 20px;
+  position: relative;
+}
+li a {
+  padding-left: 40px;
+  text-decoration: none;
+  list-style: none;
+  color: #ffffff;
+  background-color: #222f3d;
+  height: 40px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.logo img {
+  width: 140px;
+  height: 150px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu li {
+  margin-left: 0px;
+  font-size: 1.2em;
+}
+
+.menu li a {
+  justify-content: center;
+  text-decoration: none;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 30px;
+}
+
+menu li a #log-info {
+  justify-content: flex-end;
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color1);
+  transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+  width: 100%;
+}
+
+/*⭐ Hamburger and Close Menu Icons */
+.open-menu,
+.close-menu {
+  color: var(--color1);
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 100;
+  position: absolute;
+  display: none; 
+}
+
+.open-menu {
+  top: 15px;
+  right: 20px;
+}
+
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+
+#check {
+  display: none;
+}
+
+/*⭐ Responsive Navbar ⭐*/
+@media (max-width: 920px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    background-color: var(--color2);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu li {
+    margin-top: 40px;
+  }
+
+  #check:checked ~ .menu {
+    right: 0;
+    background-color: black;
+    color: white;
+    width: 400px;
+  }
+
+  .open-menu,
+  .close-menu {
+    display: block; /* Show icons on small screens */
+  }
+
+  #check:not(:checked) ~ .open-menu {
+    display: block; /* Show hamburger icon when menu is closed */
+  }
+
+  #check:checked ~ .open-menu {
+    display: none; /* Hide hamburger icon when menu is open */
+  }
+
+  #check:not(:checked) ~ .close-menu {
+    display: none; /* Hide close icon when menu is closed */
+  }
+
+  #check:checked ~ .close-menu {
+    display: block; /* Show close icon when menu is open */
+  }
+}
+
+@media (min-width: 921px) {
+  .open-menu,
+  .close-menu {
+    display: none; /* Hide hamburger and close icons on larger screens */
+  }
+}
+
+/*⭐ Content Section starts here⭐ */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  flex-grow: 1;
+}
+
+.head h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.off p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.buttons .one,
+.buttons .two {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  background-color: #404040;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.buttons .one:hover,
+.buttons .two:hover {
+  background-color: #575757;
+}
+
+/*⭐ Responsive Styles⭐ */
+@media (max-width: 800px) {
+  main {
+    height: auto;
+    padding: 0;
+    background-size: cover;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .close-btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    z-index: 101;
+  }
+
+  .nav-links.show {
+    transform: translateX(0);
+  }
+
+  .head h1 {
+    font-size: 32px;
+  }
+
+  .off p {
+    font-size: 18px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  .buttons .one,
+  .buttons .two {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+/* ⭐ Content Section Styling ⭐*/
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+  text-align: left; 
+  color: white;
+  flex-grow: 1;
+  padding: 0 50px; 
+}
+
+.head h1 {
+  font-size: 88px;
+  margin-bottom: 10px;
+}
+
+.off p {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.buttons .one,
+.buttons .two {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  background-color: #404040;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.buttons .one {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+}
+
+.buttons .two {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.buttons .one:hover,
+.buttons .two:hover {
+  background-color: #575757;
+}
+
+/*⭐ Responsive Styles  ⭐*/
+@media (max-width: 800px) {
+  .content {
+    padding: 0 20px; /* Reduce padding on smaller screens */
+  }
+
+  .head h1 {
+    font-size: 32px; /* Adjust font size */
+  }
+
+  .off p {
+    font-size: 16px; /* Adjust font size */
+  }
+
+  .buttons {
+    flex-direction: column; /* Stack buttons on smaller screens */
+  }
+
+  .buttons .one,
+  .buttons .two {
+    width: 100%;
+    margin-bottom: 10px; /* Add spacing between stacked buttons */
+  }
+}
+
+/* main section ends here */
+
+/* ⭐ about us  section⭐ */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  min-width: 300px; /* Ensure columns do not get too small */
+}
+
+.img-section {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Adjustments for Main Content */
+@media (max-width: 768px) {
+  .column {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .img-section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .hire-me, .my-work {
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+}
+
+.about_us-section {
+  
+  padding: 40px 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  flex-direction: column; 
+}
+ .content-col h3{
+  font-family: "ga", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 46px;
+  color: #444343;
+}
+.content-col p{
+  font-size: 25px;
+  text-align: justify;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  min-width: 300px; 
+  text-align: center; 
+}
+
+.img-section {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; 
+}
+
+/* Button styling */
+.btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.hire-me, .my-work {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #131362;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Adjustments for about us Section */
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row; /* Aligns columns horizontally on larger screens */
+  }
+
+  .content-col {
+    order: 1; /* Default order for content section */
+  }
+
+  .img-section {
+    order: 0; /* Moves the image section to the left */
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+
+/* appointmet section ends here */
+
+/*⭐ Services Section */
+.services {
+  padding: 50px 20px;
+  /* background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%); */
+  
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 56px;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 800;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 44px 83px;
+  justify-content: center;
+}
+
+.service-box {
+   background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+
+.service-1 {
+  background-image: url("https://img.freepik.com/free-vector/appointment-booking-with-calendar_52683-39658.jpg?ga=GA1.1.246363009.1725193313&semt=ais_hybrid");
+  height: 300px;
+    width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+  text-transform: capitalize;
+}
+.service-2 {
+  background-image: url("https://img.freepik.com/premium-vector/healthcare-smart-card-isolated-concept-vector-illustration_107173-75841.jpg?ga=GA1.1.246363009.1725193313&semt=ais_hybrid");
+  height: 300px;
+    width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+}
+.service-3 {
+  background-image: url("https://img.freepik.com/premium-vector/clinic-near-search-online-service-icon-vector_88813-2272.jpg?ga=GA1.1.246363009.1725193313&semt=ais_hybrid");
+  height: 300px;
+    width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+}
+.service-4 {
+  background-image: url("https://img.freepik.com/free-vector/healthcare-trackers-wearables-sensors-abstract-concept-illustration_335657-3844.jpg?ga=GA1.1.246363009.1725193313&semt=ais_hybrid");
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+}
+.service-5 {
+  background-image: url("https://img.freepik.com/free-vector/patient-taking-medical-examination-illustrated_23-2148850285.jpg?ga=GA1.1.246363009.1725193313&semt=ais_hybrid");
+  height: 300px;
+    width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+}
+.service-6 {
+  background-image: url("https://img.freepik.com/free-vector/flat-online-medical-conference-illustration_23-2148890145.jpg?ga=GA1.1.246363009.1725193313&semt=ais_hybrid");
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+}
+
+.btn .btn-dark {
+  background-color: #222f3d;
+}
+
+#service-box-btn {
+    margin-top: 10px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.main-btn {
+  height: 30px;
+  width: 250px;
+  border: 2px solid white;
+  color: black;
+  text-transform: uppercase;
+}
+
+.service-box h3 {
+  font-family: "EB Garamond", serif;
+  font-size: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #404040;
+}
+
+.service-box p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.service-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #404040;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.3s;
+}
+
+.service-btn:hover {
+  background-color: #575757;
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+  
+}
+
+@media (max-width: 500px) {
+  
+  .service-1,.service-2,.service-3,.service-4,.service-5,.service-6{
+    height: 200px;
+    width: 200px;
+  }
+  .services h2{
+    font-size: 2rem;
+  }
+}
+
+
+@media (min-width: 300px) and (max-width:843px){
+  .service-1,.service-2,.service-3,.service-4,.service-5,.service-6{
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+
+}
+
+
+
+
+.doctor-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  text-align: center;
+}
+
+.dr-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.doctor-image {
+  max-width: 200px;
+  width: 100%;
+height: 130%;  
+}
+
+.doctor-section h2 {
+  font-size: 2rem;
+  color: #120f0f;
+  margin-bottom: 10px;
+}
+
+.appointment-btn {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1.5rem;
+  color: #3d3d3d;
+  font-weight: 800;
+  background-color: #8BC6EC;
+  background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  text-decoration: none;
+  border: none;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.appointment-btn:hover {
+  background-color: #004a99;
+  text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .doctor-image {
+      max-width: 150px;
+  }
+
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  .appointment-btn {
+      padding: 10px 15px;
+      font-size: 0.9rem;
+  }
+}
+
+
+hr{
+   
+    border: 0;
+    border-top: 5px solid #3e3e3e;
+    border-bottom: 5px solid #3e3e3e;;
+}
+
+

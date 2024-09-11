@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Healthcare Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"  crossorigin="anonymous" ></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <nav>
+          <ul class="nav-bar">
+            <input type="checkbox" id="check" />
+            <div class="logo">
+              <img src="logo.png" alt="Logo" />
+            </div>
+            <span class="menu">
+              <li><a href="#appointment">About</a></li>
+              <li><a target="_blank" href="#">Patient</a></li>
+              <li><a target="_blank" href="#">Doctor</a></li>
+              <li><a target="_blank" href="login\login.html">Login</a></li>
+              <label for="check" class="close-menu"
+                ><i class="fas fa-times"></i
+              ></label>
+            </span>
+            <!-- Open button for the hamburger menu -->
+            <label for="check" class="open-menu"
+              ><i class="fas fa-bars"></i
+            ></label>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Main Content -->
+      <div class="content">
+        <div class="head">
+          <h1>
+            Revolution in <br />
+            Healthcare
+          </h1>
+        </div>
+        <div class="off">
+          <p>CARE CONNECT</p>
+        </div>
+        <div class="buttons">
+          <button class="one">ABOUT</button>
+          <button class="two">FIND CLINIC</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- main section ends here  -->
+
+    <!-- about section -->
+
+    <div id="appointment" class="about_us-section">
+      <div class="row">
+        <!-- Content Section (will be on the left on larger screens) -->
+        <div class="column content-col">
+          <h3>About Us</h3>
+          <p>
+            The vision of CareConnect website is to revolutionize the Indian
+            healthcare landscape by empowering healthcare providers with
+            innovative technology, streamlined workflows, and data-driven
+            insights. By equipping doctors, nurses, and other healthcare
+            professionals with cutting-edge digital solutions, we aim to enhance
+            their ability to deliver exceptional patient care, improving health
+            outcomes, patient satisfaction, and overall well-being. And after
+            implementation of all these we want that patients should be the only
+            priority of the health clinics doctors and staff as we help them to
+            keep patients records safe
+          </p>
+        </div>
+
+        <!-- Image Section (will be on the right on larger screens) -->
+        <div class="column img-section">
+          <img
+            class="mypic-section"
+            src="https://img.freepik.com/premium-vector/female-doctor-white-coat-blue-gloves-checks-male-patient-wearing-face-mask-while-sitting-chair_150234-80534.jpg?ga=GA1.2.246363009.1725193313&semt=ais_hybrid"
+            alt="Profile Image"
+          />
+        </div>
+      </div>
+    </div>
+
+    <hr />
+    <!-- book an appointment section starts here -->
+    <section class="doctor-section">
+      <div class="dr-content">
+        <img
+          src="https://img.freepik.com/free-vector/appointment-booking-with-smartphone_23-2148567481.jpg?ga=GA1.1.246363009.1725193313&semt=ais_hybrid"
+          alt="Doctor Image"
+          class="doctor-image"
+        />
+        <h2>Need a Doctor?</h2>
+        <a target="_blank" href="/patient/patient.html" class="appointment-btn"
+          >Book an Appointment</a
+        >
+      </div>
+    </section>
+
+    <hr />
+    <!-- appointment  end here    -->
+
+    <!-- service section starts here -->
+    <section class="services">
+      <h2>Our Services</h2>
+      <div class="services-container">
+        <div class="service-box">
+          <div class="service-1"></div>
+          <button type="button" id="service-box-btn" class="btn btn-dark">
+            Appointment <br />
+            Scheduling
+          </button>
+        </div>
+
+        <div class="service-box">
+          <div class="service-2"></div>
+          <button type="button" id="service-box-btn" class="btn btn-dark">
+            Medical Records
+          </button>
+        </div>
+
+        <div class="service-box">
+          <div class="service-3"></div>
+          <button type="button" id="service-box-btn" class="btn btn-dark">
+            Find a Clinic
+          </button>
+        </div>
+
+        <div class="service-box">
+          <div class="service-4"></div>
+          <button type="button" id="service-box-btn" class="btn btn-dark">
+            Personalised <br />
+            Health Tracking
+          </button>
+        </div>
+
+        <div class="service-box">
+          <div class="service-5"></div>
+          <button type="button" id="service-box-btn" class="btn btn-dark">
+            Symptom Checker
+          </button>
+        </div>
+
+        <div class="service-box">
+          <div class="service-6"></div>
+          <button type="button" id="service-box-btn" class="btn btn-dark">
+            Virtual health <br />
+            consultation
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- service scion ends -->
+
+    <script src="script.js"></script>
+  </body>
+</html>

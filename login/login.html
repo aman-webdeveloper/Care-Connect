@@ -1,0 +1,54 @@
+HTML CODE 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Website - Sign In/Sign Up</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <a href="#" class="back-button">← Back</a>
+            <h1>Expert advice from top doctors</h1>
+            <ul class="features">
+                <li><img src="icon1.png" alt="Expert advice"> Expert advice from top doctors</li>
+                <li><img src="icon2.png" alt="Available 24/7"> Available 24/7 on any device</li>
+                <li><img src="icon3.png" alt="Private questions"> Private questions answered within 24 hrs</li>
+            </ul>
+        </div>
+        <div class="right-panel">
+            <div class="toggle-buttons">
+                <button id="patientBtn" class="active" onclick="toggleForms('signin')">Patient</button>
+                <button id="doctorBtn" onclick="toggleForms('signup')">Doctor</button>
+            </div>
+            <div id="signInForm" class="form active">
+                <h2>Welcome back</h2>
+                <p>Log in to your account and we'll get you in to see our doctors.</p>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" required>
+                <a href="#" class="forgot-password">Forgot password?</a>
+                <button type="submit">Sign In</button>
+                <p class="toggle-link">Don't have an account? <a href="#" onclick="toggleForms('signup')">Sign up</a></p>
+            </div>
+            <div id="signUpForm" class="form">
+                <h2>Create an account</h2>
+                <p>Sign up to access top medical advice from experts.</p>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Full Name" required>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Email Address" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button>
+                <p class="toggle-link">Already have an account? <a href="#" onclick="toggleForms('signin')">Sign in</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
