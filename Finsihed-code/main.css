@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: Garamond, sans-serif;
 }
+body{
+  background-color: #85FFBD;
+}
 
 /* navbar starts here  */
 /* navbar */
@@ -46,13 +49,6 @@
   position: relative;
 }
 
-/* li:nth-child(4) {
-  float: right;
-  border: 1px solid white;
-  padding: 5px;
-  display: flex;
-  justify-items: end;
-} */
 
 .menu li a::after {
   content: "";
@@ -375,6 +371,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #CCF783;
+
 }
 
 .row {
@@ -451,103 +449,7 @@ main {
   }
 }
 
-/* appointmet section ends here */
-
-/*⭐ Services Section */
-.services {
-  padding: 50px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.services h2 {
-  color: #68b684;
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-}
-
-.services-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.service-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: #7a40e5;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  width: 350px;
-  height: 350px;
-  text-align: center;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-.service-icon {
-  height: 125px;
-  width: 125px;
-  margin: 0 auto 20px;
-  background-color: #e0f0e0;
-  border-radius: 50%;
-}
-
-.service-1 {
-  background-image: url("/main/images/appointnment-scheduling.png");
-  background-size: cover;
-}
-
-.service-2 {
-  background-image: url("/main/images/medical-record.png");
-  background-size: cover;
-}
-
-.service-3 {
-  background-image: url("/main/images/find-a-clinic.png");
-  background-size: cover;
-}
-
-.service-4 {
-  background-image: url("/main/images/billing.jpg");
-  background-size: cover;
-}
-
-.service-5 {
-  background-image: url("/main/images/precription-managment.png");
-  background-size: cover;
-}
-
-.service-6 {
-  background-image: url("/main/images/virtual-helath.png");
-  background-size: cover;
-}
-
-.service-box-btn {
-  background-color: #68b684;
-  color: #fff;
-  border: none;
-  padding: 10px 10px;
-  border-radius: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.service-box-btn:hover {
-  background-color: #4b9461;
-}
-
-/* ends here */
+/* appointment sratrs here */
 
 .doctor-section {
   display: flex;
@@ -555,9 +457,11 @@ main {
   align-items: center;
   min-height: 70vh;
   text-align: center;
-  background-image: url("https://img.freepik.com/free-vector/neumorphic-style-blank-white-banner-with-slanting-lines-design_1017-53841.jpg?ga=GA1.2.246363009.1725193313&semt=ais_hybrid");
+  /* background-image: url("https://img.freepik.com/free-vector/neumorphic-style-blank-white-banner-with-slanting-lines-design_1017-53841.jpg?ga=GA1.2.246363009.1725193313&semt=ais_hybrid"); */
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #2e2e2e;
+
 }
 
 .dr-content {
@@ -618,12 +522,120 @@ main {
 }
 
 hr {
-  border: 0;
+  /* border: 0;
   border-top: 2px solid #3e3e3e;
   border-bottom: 2px solid #3e3e3e;
-  border: 2px solid #3e3e3e;
+  border: 2px solid #3e3e3e; */
 }
 
+
+
+/* appointmet section ends here */
+
+/*⭐ Services Section */
+.services {
+  padding: 50px;
+  background-color: #323131;
+  text-align: center;
+}
+
+.services h2 {
+  color: #fbfbfb;
+  margin-bottom: 40px;
+  font-size: 60px;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  /* background-color: #CCF783; */
+
+}
+
+.service-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: #7a40e5; */
+  background-color: #CCF783;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  height: 350px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  height: 125px;
+  width: 125px;
+  margin: 0 auto 20px;
+  background-color: #e0f0e0;
+  border-radius: 50%;
+}
+
+.service-1 {
+  background-image: url("/main/images/appointnment-scheduling.png");
+  background-size: contain;
+  background-position: center;
+}
+
+.service-2 {
+  background-image: url("/main/images/medical-record.png");
+  background-size: contain;
+   background-position: center;
+}
+
+.service-3 {
+  background-image: url("/main/images/find-a-clinic.png");
+  background-size: contain;
+  background-position: center;
+}
+
+.service-4 {
+  background-image: url("/main/images/billing.jpg");
+  background-size: contain;
+  background-position: center;
+}
+
+.service-5 {
+  background-image: url("/main/images/precription-managment.png");
+  background-size: contain;
+  background-position: center;
+}
+
+.service-6 {
+  background-image: url("/main/images/virtual-helath.png");
+  background-size: contain;
+  background-position: center;
+}
+
+.service-box-btn {
+  background-color: #272727;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.service-box-btn:hover {
+  background-color: #4b9461;
+}
+
+/*  service ends here */
 
 /*  crousel strats */
 .carousel-container {
@@ -632,6 +644,21 @@ hr {
   overflow: hidden;
   margin: auto;
   position: relative;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  background-color: #191919;
+  
+}
+
+.carousel-container span{
+  color: #333;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: ui-monospace;
+
 }
 
 .carousel-track {
@@ -642,12 +669,14 @@ hr {
 .card {
   flex: 1 0 30%; /* Show 2-3 cards based on screen size */
   margin: 0 10px;
-  background-color: white;
+  background-color: #CCF783;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
+
 
 .card img {
   width: 100%;
@@ -658,7 +687,7 @@ hr {
 
 .card h3 {
   margin-top: 15px;
-  font-size: 1.5rem;
+  font-size: 2.8rem;
   color: #333;
 }
 

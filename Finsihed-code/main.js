@@ -19,3 +19,5 @@ document.getElementById("sign-in-tab").addEventListener("click", function () {
           <button type="submit">Sign Up</button>`;
             document.querySelector(".login-link").style.display = "block";
   });
+
+//   crusel
