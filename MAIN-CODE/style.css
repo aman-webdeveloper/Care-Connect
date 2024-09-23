@@ -581,37 +581,37 @@ main {
 }
 
 .service-1 {
-  background-image: url("/Finsihed-code/images/appointnment-scheduling.png");
+  background-image: url("/MAIN-CODE/images/appointnment-scheduling.png");
   background-size: contain;
   background-position: center;
 }
 
 .service-2 {
-  background-image: url("/Finsihed-code/images/medical-record.png");
+  background-image: url("/MAIN-CODE/images/medical-record.png");
   background-size: contain;
    background-position: center;
 }
 
 .service-3 {
-  background-image: url("/Finsihed-code/images/find-a-clinic.png");
+  background-image: url("/MAIN-CODE/images/find-a-clinic.png");
   background-size: contain;
   background-position: center;
 }
 
 .service-4 {
-  background-image: url("/Finsihed-code/images/billing.jpg");
+  background-image: url("/MAIN-CODE/images/billing.jpg");
   background-size: contain;
   background-position: center;
 }
 
 .service-5 {
-  background-image: url("/Finsihed-code/images/precription-managment.png");
+  background-image: url("/MAIN-CODE/images/precription-managment.png");
   background-size: contain;
   background-position: center;
 }
 
 .service-6 {
-  background-image: url("/Finsihed-code/images/virtual-helath.png");
+  background-image: url("/MAIN-CODE/images/virtual-helath.png");
   background-size: contain;
   background-position: center;
 }
@@ -824,3 +824,60 @@ main {
 /* fotter cards ends here  */
 
 
+
+
+/* serachbar code */
+
+.search-container {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#location-input {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+#find-clinic-btn {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#clinic-results {
+  margin: 20px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.clinic {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.message {
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.message.info {
+  background-color: #e0f7fa;
+  color: #00796b;
+}
+
+.message.error {
+  background-color: #ffcdd2;
+  color: #c62828;
+}
