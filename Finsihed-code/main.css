@@ -1,8 +1,3 @@
-/* Basic Reset */
-@import "bootstrap/scss/bootstrap";
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-/* here we added links for fonts  */
 
 * {
   margin: 0;
@@ -10,50 +5,28 @@
   box-sizing: border-box;
   font-family: Garamond, sans-serif;
 }
-
-/*⭐ Main Section Starts ⭐*/
-main {
-  height: 100vh;
-  width: 100%;
-  background-image: linear-gradient(100deg, #404040 0%, #00000000 100%),
-    url("https://cdn.pixabay.com/photo/2017/03/14/03/20/woman-2141808_1280.jpg");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-}
-.logo img {
-  height: 85px;
-  width: 95px;
-  cursor: pointer;
+:root {
+  --green: #CCF783;;
+  --black: #323131;
 }
 
+/* navbar */
 .nav-bar {
+  height: 55px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
   background-color: var(--color2);
-  padding: 12px 20px;
+  padding: 0px 20px;
   position: relative;
-}
-li a {
-  padding-left: 40px;
-  text-decoration: none;
-  list-style: none;
-  color: #ffffff;
-  background-color: #222f3d;
-  height: 40px;
-  border-radius: 10px;
-  margin: 20px;
+  background-color: #3d3d3d;
+  margin-bottom: 0;
 }
 
 .logo img {
-  width: 140px;
-  height: 150px;
+  width: 40px;
 }
 
 .menu {
@@ -65,24 +38,17 @@ li a {
 }
 
 .menu li {
-  margin-left: 0px;
-  font-size: 1.2em;
+  margin-left: 30px;
+  font-size: 1.5em;
 }
 
 .menu li a {
-  justify-content: center;
   text-decoration: none;
+  color: white;
   transition: 0.15s ease-in-out;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-right: 30px;
 }
 
-menu li a #log-info {
-  justify-content: flex-end;
-}
 
 .menu li a::after {
   content: "";
@@ -99,7 +65,7 @@ menu li a #log-info {
   width: 100%;
 }
 
-/*⭐ Hamburger and Close Menu Icons */
+/* Hamburger and Close Menu Icons */
 .open-menu,
 .close-menu {
   color: var(--color1);
@@ -107,7 +73,7 @@ menu li a #log-info {
   font-size: 1.5rem;
   z-index: 100;
   position: absolute;
-  display: none;
+  display: none; /* Hidden by default */
 }
 
 .open-menu {
@@ -124,7 +90,7 @@ menu li a #log-info {
   display: none;
 }
 
-/*⭐ Responsive Navbar ⭐*/
+/* Responsive Navbar */
 @media (max-width: 920px) {
   .menu {
     flex-direction: column;
@@ -146,21 +112,22 @@ menu li a #log-info {
 
   #check:checked ~ .menu {
     right: 0;
-    background-color: black;
-    color: white;
-    width: 400px;
+    background-color: #343434;
   }
 
   .open-menu,
   .close-menu {
+    color: white;
     display: block; /* Show icons on small screens */
   }
 
   #check:not(:checked) ~ .open-menu {
+    color: white;
     display: block; /* Show hamburger icon when menu is closed */
   }
 
   #check:checked ~ .open-menu {
+    color: white;
     display: none; /* Hide hamburger icon when menu is open */
   }
 
@@ -173,12 +140,42 @@ menu li a #log-info {
   }
 }
 
+/* Hide Hamburger on Larger Screens */
 @media (min-width: 921px) {
-  .open-menu,
-  .close-menu {
+  .open-menu, .close-menu {
     display: none; /* Hide hamburger and close icons on larger screens */
   }
 }
+
+.logo img {
+  height: 85px;
+  width: 95px;
+  cursor: pointer;
+}
+
+
+/* navbar ends here */
+
+/*⭐ Main Section Starts ⭐*/
+main {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(100deg, #404040 0%, #00000000 100%),
+    url("https://cdn.pixabay.com/photo/2017/03/14/03/20/woman-2141808_1280.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex !important;
+  flex-direction: column;
+  /* position :; */
+  top: 0;
+}
+.logcrdentials{
+  text-decoration: underline;
+  color: red;
+}
+
 
 /*⭐ Content Section starts here⭐ */
 .content {
@@ -228,58 +225,6 @@ menu li a #log-info {
     height: auto;
     padding: 0;
     background-size: cover;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: transparent;
-    width: 100%;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    z-index: 100;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .close-btn {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;
-    z-index: 101;
-  }
-
-  .nav-links.show {
-    transform: translateX(0);
-  }
-
-  .head h1 {
-    font-size: 32px;
-  }
-
-  .off p {
-    font-size: 18px;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
-  .buttons .one,
-  .buttons .two {
-    width: 100%;
-    margin-bottom: 10px;
   }
 }
 
@@ -426,6 +371,8 @@ menu li a #log-info {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #CCF783;
+
 }
 
 .row {
@@ -502,103 +449,7 @@ menu li a #log-info {
   }
 }
 
-/* appointmet section ends here */
-
-/*⭐ Services Section */
-.services {
-  padding: 50px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.services h2 {
-  color: #68b684;
-  margin-bottom: 40px;
-  font-size: 2.5rem;
-}
-
-.services-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.service-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: #7a40e5;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  width: 350px;
-  height: 350px;
-  text-align: center;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
-
-.service-icon {
-  height: 125px;
-  width: 125px;
-  margin: 0 auto 20px;
-  background-color: #e0f0e0;
-  border-radius: 50%;
-}
-
-.service-1 {
-  background-image: url("images/appointment-icon.png");
-  background-size: cover;
-}
-
-.service-2 {
-  background-image: url("images/medical-records-icon.png");
-  background-size: cover;
-}
-
-.service-3 {
-  background-image: url("images/find-clinic-icon.png");
-  background-size: cover;
-}
-
-.service-4 {
-  background-image: url("images/health-tracking-icon.png");
-  background-size: cover;
-}
-
-.service-5 {
-  background-image: url("images/symptom-checker-icon.png");
-  background-size: cover;
-}
-
-.service-6 {
-  background-image: url("images/virtual-consultation-icon.png");
-  background-size: cover;
-}
-
-.service-box-btn {
-  background-color: #68b684;
-  color: #fff;
-  border: none;
-  padding: 10px 10px;
-  border-radius: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.service-box-btn:hover {
-  background-color: #4b9461;
-}
-
-/* ends here */
+/* appointment sratrs here */
 
 .doctor-section {
   display: flex;
@@ -606,9 +457,12 @@ menu li a #log-info {
   align-items: center;
   min-height: 70vh;
   text-align: center;
-  background-image: url("https://img.freepik.com/free-vector/neumorphic-style-blank-white-banner-with-slanting-lines-design_1017-53841.jpg?ga=GA1.2.246363009.1725193313&semt=ais_hybrid");
+  /* background-image: url("https://img.freepik.com/free-vector/neumorphic-style-blank-white-banner-with-slanting-lines-design_1017-53841.jpg?ga=GA1.2.246363009.1725193313&semt=ais_hybrid"); */
   background-repeat: no-repeat;
   background-size: cover;
+  /* background-color: var(--green); */
+  background-color: var(--black);
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
 
 .dr-content {
@@ -619,6 +473,7 @@ menu li a #log-info {
 }
 
 .doctor-image {
+  margin-top:20px;
   max-width: 200px;
   width: 100%;
   height: 130%;
@@ -626,15 +481,15 @@ menu li a #log-info {
 }
 
 .doctor-section h2 {
-  font-size: 2rem;
-  color: #120f0f;
-  margin-bottom: 10px;
+  font-size: 4rem;
+    color: white;
+    margin-bottom: 20px;
 }
 
 .appointment-btn {
   display: inline-block;
   padding: 12px 20px;
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   color: #3d3d3d;
   font-weight: 800;
   background-color: #8bc6ec;
@@ -645,6 +500,8 @@ menu li a #log-info {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-bottom: 30px;
+  
 }
 
 .appointment-btn:hover {
@@ -668,8 +525,302 @@ menu li a #log-info {
   }
 }
 
-hr {
-  border: 0;
-  border-top: 5px solid #3e3e3e;
-  border-bottom: 5px solid #3e3e3e;
+
+
+
+/* appointmet section ends here */
+
+/*⭐ Services Section */
+.services {
+  padding: 50px;
+  text-align: center;
+  background-color: var(--black);
 }
+
+.services h2 {
+  color: #fbfbfb;
+  margin-bottom: 40px;
+  font-size: 60px;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  /* background-color: #CCF783; */
+
+}
+
+.service-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* background-color: #7a40e5; */
+  background-color: #CCF783;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  height: 350px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.service-icon {
+  height: 125px;
+  width: 125px;
+  margin: 0 auto 20px;
+  background-color: #e0f0e0;
+  border-radius: 50%;
+}
+
+.service-1 {
+  background-image: url("/Finsihed-code/images/appointnment-scheduling.png");
+  background-size: contain;
+  background-position: center;
+}
+
+.service-2 {
+  background-image: url("/Finsihed-code/images/medical-record.png");
+  background-size: contain;
+   background-position: center;
+}
+
+.service-3 {
+  background-image: url("/Finsihed-code/images/find-a-clinic.png");
+  background-size: contain;
+  background-position: center;
+}
+
+.service-4 {
+  background-image: url("/Finsihed-code/images/billing.jpg");
+  background-size: contain;
+  background-position: center;
+}
+
+.service-5 {
+  background-image: url("/Finsihed-code/images/precription-managment.png");
+  background-size: contain;
+  background-position: center;
+}
+
+.service-6 {
+  background-image: url("/Finsihed-code/images/virtual-helath.png");
+  background-size: contain;
+  background-position: center;
+}
+
+.service-box-btn {
+  background-color: #272727;
+  color: #fff;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.service-box-btn:hover {
+  background-color: #4b9461;
+}
+
+/*  service ends here */
+
+/*  crousel strats */
+.carousel-container {
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: auto;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--green);
+}
+
+.carousel-container span{
+  color: var(--black);
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: ui-monospace;
+
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  margin-top: 40px;
+}
+
+.card {
+  flex: 1 0 30%; /* Show 2-3 cards based on screen size */
+  margin: 0 10px;
+  background-color: var(--black);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin-top: 15px;
+  font-size: 2.8rem;
+  color: white;
+}
+
+.card p {
+  color: #777;
+  margin: 10px 0;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .card {
+    flex: 1 0 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 0 90%;
+  }
+}
+
+/* Navigation Arrows (optional) */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 100;
+  font-size: 18px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* crousel ends here */
+
+/* footer code starts from here */
+
+.footer {
+  background-color: #2B3E50;
+  color: #FFFFFF;
+  padding: 40px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 20px;
+  min-width: 250px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #00BFA5;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.footer-section ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #00BFA5;
+}
+
+.footer-section .social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-section .social-icons a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.footer-section .social-icons a:hover {
+  color: #00BFA5;
+}
+
+.footer-section p {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #CCCCCC;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  color: #CCCCCC;
+  background-color: rgb(49, 44, 44);
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-section {
+      margin: 20px 0;
+  }
+
+  .footer-section .social-icons{
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* fotter cards ends here  */
+
+

@@ -1,22 +1,20 @@
-function toggleForms(formType) {
-    const signInForm = document.getElementById('signInForm');
-    const signUpForm = document.getElementById('signUpForm');
-    const signInBtn = document.getElementById('signInBtn');
-    const signUpBtn = document.getElementById('signUpBtn');
-
-    if (formType === 'signin') {
-        signInForm.classList.add('active');
-        signUpForm.classList.remove('active');
-        if (signInBtn && signUpBtn) {
-            signInBtn.classList.add('active-btn');
-            signUpBtn.classList.remove('active-btn');
-        }
-    } else {
-        signUpForm.classList.add('active');
-        signInForm.classList.remove('active');
-        if (signInBtn && signUpBtn) {
-            signUpBtn.classList.add('active-btn');
-            signInBtn.classList.remove('active-btn');
-        }
-    }
-}
+document.getElementById('loginToggle').addEventListener('click', function() {
+    document.getElementById('loginForm').classList.add('active');
+    document.getElementById('signupForm').classList.remove('active');
+    document.getElementById('loginToggle').classList.add('active');
+    document.getElementById('signupToggle').classList.remove('active');
+  });
+  
+  document.getElementById('signupToggle').addEventListener('click', function() {
+    document.getElementById('signupForm').classList.add('active');
+    document.getElementById('loginForm').classList.remove('active');
+    document.getElementById('signupToggle').classList.add('active');
+    document.getElementById('loginToggle').classList.remove('active');
+  });
+  
+  document.getElementById('switchToLogin').addEventListener('click', function() {
+    document.getElementById('loginForm').classList.add('active');
+    document.getElementById('signupForm').classList.remove('active');
+    document.getElementById('loginToggle').classList.add('active');
+    document.getElementById('signupToggle').classList.remove('active');
+  });
