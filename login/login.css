@@ -75,6 +75,10 @@
     transition: border-color 0.3s;
   }
   
+  .textbox input::placeholder{
+    color: white;
+  }
+
   .textbox input:focus {
     border-color: #0b8457;
   }
