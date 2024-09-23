@@ -10,6 +10,10 @@
   --black: #323131;
 }
 
+body{
+  background-color: var(--black);
+  overflow-x: hidden;
+}
 /* navbar */
 .nav-bar {
   height: 55px;
@@ -694,6 +698,12 @@ main {
   margin: 10px 0;
 }
 
+.card .map-link{
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
 /* Responsive design */
 @media (max-width: 1024px) {
   .card {
@@ -730,6 +740,280 @@ main {
 }
 
 /* crousel ends here */
+
+/* extra section */
+
+
+.care-connect-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  color: white;
+  padding: 50px;
+  height: 100vh;
+}
+
+.care-connect-content {
+  max-width: 600px;
+  text-align: center;
+}
+
+.care-connect-content h1 {
+  font-size: 48px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.care-connect-content p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+  .care-connect-section {
+      height: 50vh;
+      padding: 100px 0;
+  }
+
+  .care-connect-content {
+      text-align: left;
+  }
+
+  .care-connect-content h1 {
+      font-size: 60px;
+  }
+
+  .care-connect-content p {
+      font-size: 20px;
+      line-height: 1.6;
+  }
+}
+
+@media (max-width: 768px) {
+  .care-connect-section {
+      padding: 30px;
+  }
+
+  .care-connect-content h1 {
+      font-size: 36px;
+  }
+
+  .care-connect-content p {
+      font-size: 16px;
+      line-height: 1.4;
+  }
+}
+
+.booking-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 40px;
+  background-color: #d8ff94;
+  border-radius: 15px;
+  max-width: 1200px;
+  margin: 50px auto;
+  gap: 30px;
+}
+
+.booking-content {
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.booking-content h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.booking-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.appointment-button {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.appointment-button:hover {
+  background-color: #444;
+}
+
+.booking-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .booking-section {
+      grid-template-columns: 1fr;
+      text-align: center;
+  }
+
+  .booking-content {
+      text-align: center;
+  }
+
+  .booking-image img {
+      width: 80%;
+      margin: 0 auto;
+  }
+}
+
+.dashboard {
+  margin: 50px auto;
+  padding: 30px;
+  max-width: 1200px;
+  background-color: #000;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.dashboard h2 {
+  color: #d8ff94;
+  font-size: 28px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #d8ff94;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.dashboard-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.option {
+  background-color: #181818;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  margin: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #d8ff94;
+}
+
+.option:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 255, 0, 0.3);
+}
+
+.option img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #d8ff94;
+}
+
+.option button {
+  background-color: #d8ff94;
+  color: #000;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin: auto;
+  display: flex;
+  font-weight: 800;
+}
+
+.option .bttn{
+  background-color: #d8ff94;
+  color: #000;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin: auto;
+  display: flex;
+  font-weight: 800;
+  width: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.option  .bttn:hover{
+  text-decoration: none;
+}
+
+.option .bttn:hover {
+  background-color: #b8e080;
+}
+.option button:hover {
+  background-color: #b8e080;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 1024px) {
+  .dashboard-options {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+  }
+
+  .option {
+      width: 100%;
+  }
+
+  .option img {
+      width: 100px;
+      height: 100px;
+  }
+
+  .option button {
+      font-size: 14px;
+      padding: 8px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .option {
+      padding: 15px;
+  }
+
+  .option img {
+      width: 130px;
+      height: 130px;
+  }
+
+  .option button {
+      font-size: 12px;
+      padding: 6px 15px;
+      margin: auto;
+  }
+}
+
+
+/* ends here extra */
 
 /* footer code starts from here */
 
