@@ -94,3 +94,8 @@ document.getElementById('find-clinic-btn').addEventListener('click', function ()
       displayMessage('Please enter a valid location.', 'error');
   }
 });
+
+// buttons for services
+
+
+

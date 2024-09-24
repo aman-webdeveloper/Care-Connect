@@ -69,6 +69,31 @@ body{
   width: 100%;
 }
 
+/* dropdwon */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2B3E50;;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #2B3E50;
+  color: white;
+}
+
+.login:hover .dropdown-content {
+  display: block;
+}
 /* Hamburger and Close Menu Icons */
 .open-menu,
 .close-menu {

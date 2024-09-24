@@ -27,11 +27,18 @@
           <img src="/MAIN-CODE/images/logo.png" alt="Logo" />
         </div>
         <span class="menu">
+          <li><a href="#appointment">Home</a></li>
           <li><a href="#appointment">About</a></li>
-          <li><a href="#">Patient</a></li>
-          <li><a href="#">Doctor</a></li>
-
-          <li><a class="logcrdentials" href="/login/login.html">Login</a></li>
+          <li><a href="#services-location"> Our Services</a></li>
+           <!-- Login Dropdown Menu -->
+      <li class="login">
+        <a href="#">Login</a>
+        <div class="dropdown-content">
+          <a href="/doctor-login/index.html" target="_blank">For a Doctor</a> <!-- Replace with actual link -->
+          <a href="/login/login.html" target="_blank">For a Patient</a> <!-- Replace with actual link -->
+        </div>
+      </li>
+         
           <!-- Close button for the hamburger menu -->
           <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
         </span>
@@ -100,7 +107,7 @@
         src="https://img.freepik.com/free-vector/appointment-booking-with-smartphone_23-2148567481.jpg?ga=GA1.1.246363009.1725193313&semt=ais_hybrid"
         alt="Doctor Image" class="doctor-image" />
       <h2>Need a Doctor?</h2>
-      <a href="/patient/patient.html" class="appointment-btn">Book an Appointment</a>
+      <a target="_blank" href="/services/find_clinic/bookapint.html" class="appointment-btn">Book an Appointment</a>
     </div>
   </section>
 
@@ -110,32 +117,38 @@
     <div class="services-container">
       <div class="service-box">
         <div class="service-icon service-1"></div>
-        <button type="button" class="service-box-btn">Appointment Scheduling</button>
+        <a target="_blank" class="appointment-button" href="/patient and clinic/clinic.html">Appointment Scheduling</a> 
+        <!-- <button type="button" class="service-box-btn">Appointment Scheduling</button> -->
       </div>
 
       <div class="service-box">
         <div class="service-icon service-2"></div>
-        <button type="button" class="service-box-btn">Medical Records</button>
+        <a target="_blank" class="appointment-button" href="/services/find_clinic/medicalrecord.html">Medical Records</a> 
+        <!-- <button type="button" class="service-box-btn">Medical Records</button> -->
       </div>
 
       <div class="service-box">
         <div class="service-icon service-3"></div>
-        <button type="button" class="service-box-btn">Find a Clinic</button>
+        <a target="_blank" class="appointment-button" href="/services/find_clinic/findclinic.html">Find a Clinic</a> 
+        <!-- <button type="button" class="service-box-btn">Find a Clinic</button> -->
       </div>
 
       <div class="service-box">
         <div class="service-icon service-4"></div>
-        <button type="button" class="service-box-btn">Health Billing</button>
+        <a target="_blank" class="appointment-button" href="/services/billings.html">Health Billing</a> 
+        <!-- <button type="button" class="service-box-btn">Health Billing</button> -->
       </div>
 
       <div class="service-box">
         <div class="service-icon service-5"></div>
-        <button type="button" class="service-box-btn">Precription-Managment</button>
+        <a target="_blank" class="appointment-button" href="/services/find_clinic/bookapint.html">Appointment Scheduling</a> 
+        <!-- <button type="button" class="service-box-btn">Precription-Managment</button> -->
       </div>
 
       <div class="service-box">
         <div class="service-icon service-6"></div>
-        <button type="button" class="service-box-btn">Virtual Health Consultation</button>
+        <a target="_blank" class="appointment-button" href="/services/find_clinic/bookapint.html">Appointment Scheduling</a> 
+        <!-- <button type="button" class="service-box-btn">Virtual Health Consultation</button> -->
       </div>
     </div>
   </section>
@@ -195,7 +208,9 @@
         <p>Book your appointment effortlessly with our easy-to-use online scheduling system. Choose your preferred
           doctor, date, and time, and receive instant confirmation. Prioritize your health with seamless, hassle-free
           bookings.</p>
-        <button class="appointment-button">Appointment Booking</button>
+        <!-- <button class="appointment-button">Appointment Booking</button> -->
+        <a target="_blank" class="appointment-button" href="/patient and clinic/clinic.html">Appointment Scheduling</a> 
+
       </div>
       <div class="booking-image">
         <img
@@ -217,7 +232,9 @@
         <p>Manage your healthcare expenses with our streamlined monthly billing service. Get clear, detailed invoices,
           track payments easily, and enjoy hassle-free transactions. Stay organized and stress-free with automated
           billing solutions.</p>
-        <button class="appointment-button">MONTHLY BILLING</button>
+        <!-- <button class="appointment-button">MONTHLY BILLING</button> -->
+        <a target="_blank" class="appointment-button" href="/services/billings.html">Health Billing</a> 
+
       </div>
     </div>
   </div>
