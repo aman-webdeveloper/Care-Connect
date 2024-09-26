@@ -17,25 +17,25 @@
   <script src="./MAIN-CODE/script.js"></script>
 </head>
 
-<body>
+<body onload="demoData()" beforeunload="demoDataDestroy()">
 
   <header>
     <nav>
       <ul class='nav-bar'>
         <input type='checkbox' id='check' />
         <div class="logo">
-          <img src="/MAIN-CODE/images/logo.png" alt="Logo" />
+          <img src="./MAIN-CODE/images/logo.png" alt="Logo" />
         </div>
         <span class="menu">
           <li><a href="#appointment">Home</a></li>
           <li><a href="#appointment">About</a></li>
           <li><a href="#services-location"> Our Services</a></li>
            <!-- Login Dropdown Menu -->
-      <li class="login">
+      <li class="login" id="homelogin">
         <a href="#">Login</a>
         <div class="dropdown-content">
-          <a href="/doctor-login/index.html" target="_blank">For a Doctor</a> <!-- Replace with actual link -->
-          <a href="/login/login.html" target="_blank">For a Patient</a> <!-- Replace with actual link -->
+          <a href="./doctor-login/index.html" target="_blank">For a Doctor</a> <!-- Replace with actual link -->
+          <a href="./login/login.html" target="_blank">For a Patient</a> <!-- Replace with actual link -->
         </div>
       </li>
          
@@ -62,8 +62,8 @@
         <p>CARE CONNECT</p>
       </div>
       <div class="buttons">
-        <button class="one">ABOUT</button>
-        <button class="two">FIND CLINIC</button>
+      <a class="one" href="#about">ABOUT</a> 
+      <a class="two" href="./services/find_clinic/findclinic.html">FIND CLINIC</a> 
       </div>
     </div>
   </main>
@@ -75,7 +75,7 @@
   <div id="appointment" class="about_us-section">
     <div class="row">
       <!-- Content Section (will be on the left on larger screens) -->
-      <div class="column content-col">
+      <div id="about" class="column content-col">
         <h3>About Us</h3>
         <p>
           The vision of CareConnect website is to revolutionize the Indian
@@ -95,7 +95,7 @@
       <div sr class="column img-section">
         <img
           style="box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;"
-          class="mypic-section" src="/MAIN-CODE/images/desk image.jpg" alt="Profile Image" />
+          class="mypic-section" src="./MAIN-CODE/images/desk image.jpg" alt="Profile Image" />
       </div>
     </div>
   </div>
@@ -107,7 +107,7 @@
         src="https://img.freepik.com/free-vector/appointment-booking-with-smartphone_23-2148567481.jpg?ga=GA1.1.246363009.1725193313&semt=ais_hybrid"
         alt="Doctor Image" class="doctor-image" />
       <h2>Need a Doctor?</h2>
-      <a target="_blank" href="/services/find_clinic/bookapint.html" class="appointment-btn">Book an Appointment</a>
+      <a  href="./services/find_clinic/bookapint.html" class="appointment-btn">Book an Appointment</a>
     </div>
   </section>
 
@@ -117,37 +117,37 @@
     <div class="services-container">
       <div class="service-box">
         <div class="service-icon service-1"></div>
-        <a target="_blank" class="appointment-button" href="/patient and clinic/clinic.html">Appointment Scheduling</a> 
+        <a  class="appointment-button" href="./services/find_clinic/bookapint.html">Appointment Scheduling</a> 
         <!-- <button type="button" class="service-box-btn">Appointment Scheduling</button> -->
       </div>
 
       <div class="service-box">
         <div class="service-icon service-2"></div>
-        <a target="_blank" class="appointment-button" href="/services/find_clinic/medicalrecord.html">Medical Records</a> 
+        <a  class="appointment-button" href="./services/find_clinic/medicalrecord.html">Medical Records</a> 
         <!-- <button type="button" class="service-box-btn">Medical Records</button> -->
       </div>
 
       <div class="service-box">
         <div class="service-icon service-3"></div>
-        <a target="_blank" class="appointment-button" href="/services/find_clinic/findclinic.html">Find a Clinic</a> 
+        <a target="_blank" class="appointment-button" href="./services/find_clinic/findclinic.html">Find a Clinic</a> 
         <!-- <button type="button" class="service-box-btn">Find a Clinic</button> -->
       </div>
 
       <div class="service-box">
         <div class="service-icon service-4"></div>
-        <a target="_blank" class="appointment-button" href="/services/billings.html">Health Billing</a> 
+        <a target="_blank" class="appointment-button" href="./services/billings.html">Health Billing</a> 
         <!-- <button type="button" class="service-box-btn">Health Billing</button> -->
       </div>
 
       <div class="service-box">
         <div class="service-icon service-5"></div>
-        <a target="_blank" class="appointment-button" href="/services/find_clinic/bookapint.html">Appointment Scheduling</a> 
+        <a target="_blank" class="appointment-button" href="/services/find_clinic/bookapint.html">Precription-Managment</a> 
         <!-- <button type="button" class="service-box-btn">Precription-Managment</button> -->
       </div>
 
       <div class="service-box">
         <div class="service-icon service-6"></div>
-        <a target="_blank" class="appointment-button" href="/services/find_clinic/bookapint.html">Appointment Scheduling</a> 
+        <a target="_blank" class="appointment-button" href="/services/find_clinic/bookapint.html">Virtual Health Consultation</a> 
         <!-- <button type="button" class="service-box-btn">Virtual Health Consultation</button> -->
       </div>
     </div>
@@ -161,27 +161,27 @@
       <span>Specialised Doctor Near You</span>
       <div class="carousel-track">
         <div class="card">
-          <img src="/MAIN-CODE/images/cardiologist.jpg" alt="Card Image">
+          <img src="./MAIN-CODE/images/cardiologist.jpg" alt="Card Image">
           <h3>Cardiologist</h3>
           <a target="_blank" class="map-link" href="https://www.google.com/maps/search/Cardiologist/">Locate On Map</a>
         </div>
         <div class="card">
-          <img src="/MAIN-CODE/images/dermatologist.jpg" alt="Card Image">
+          <img src="./MAIN-CODE/images/dermatologist.jpg" alt="Card Image">
           <h3>Dermatologist</h3>
           <a target="_blank" class="map-link" href="https://www.google.com/maps/search/Dermatologist/">Locate On Map</a>
         </div>
         <div class="card">
-          <img src="/MAIN-CODE/images/dietician.jpg" alt="Card Image">
+          <img src="./MAIN-CODE/images/dietician.jpg" alt="Card Image">
           <h3>Dietician</h3>
           <a target="_blank" class="map-link" href="https://www.google.com/maps/search/Dietician/">Locate On Map</a>
         </div>
         <div class="card">
-          <img src="/MAIN-CODE/images/neurologist).jpg" alt="Card Image">
+          <img src="./MAIN-CODE/images/neurologist).jpg" alt="Card Image">
           <h3>Neurologist</h3>
           <a target="_blank" class="map-link" href="https://www.google.com/maps/search/Neurologist/">Locate On Map</a>
         </div>
         <div class="card">
-          <img src="/MAIN-CODE/images/pediatrician.jpg" alt="Card Image">
+          <img src="./MAIN-CODE/images/pediatrician.jpg" alt="Card Image">
           <h3>Pediatrician</h3>
           <a target="_blank" class="map-link" href="https://www.google.com/maps/search/Pediatrician/">Locate On Map</a>
         </div>
@@ -209,7 +209,7 @@
           doctor, date, and time, and receive instant confirmation. Prioritize your health with seamless, hassle-free
           bookings.</p>
         <!-- <button class="appointment-button">Appointment Booking</button> -->
-        <a target="_blank" class="appointment-button" href="/patient and clinic/clinic.html">Appointment Scheduling</a> 
+        <a target="_blank" class="appointment-button" href="./patient and clinic/clinic.html">Appointment Scheduling</a> 
 
       </div>
       <div class="booking-image">
@@ -233,7 +233,7 @@
           track payments easily, and enjoy hassle-free transactions. Stay organized and stress-free with automated
           billing solutions.</p>
         <!-- <button class="appointment-button">MONTHLY BILLING</button> -->
-        <a target="_blank" class="appointment-button" href="/services/billings.html">Health Billing</a> 
+        <a target="_blank" class="appointment-button" href="./services/billings.html">Health Billing</a> 
 
       </div>
     </div>
@@ -246,13 +246,13 @@
         <img
           src="https://img.freepik.com/premium-photo/3d-render-caucasian-male-doctor-wears-glasses-holds-blue-clipboard-medical-clip-art-isolated-blue-background-health-insurance-concept-professional-therapist-hospital-assistant_1254992-238176.jpg?semt=ais_hybrid"
           alt="Doctors">
-        <a target="_blank" class="bttn" href="/doctor-login/index.html">For Doctors</a> 
+        <a target="_blank" class="bttn" href="./doctor-login/index.html">For Doctors</a> 
       </div>
       <div class="option">
         <img
           src="https://img.freepik.com/free-photo/niece-hugging-sick-woman-family-visit-hospital-ward-child-mother-visiting-retired-patient-with-disease-hospitalized-person-enjoying-chat-with-young-girl-helping-with-recovery_482257-35247.jpg?semt=ais_hybrid"
           alt="Patients">
-          <a target="_blank" class="bttn" href="/login/login.html">For Patient</a> 
+          <a target="_blank" class="bttn" href="./login/login.html">For Patient</a> 
       </div>
     </div>
   </div>
@@ -342,6 +342,14 @@
       slidePrev();
       autoSlideInterval = setInterval(slideNext, 2000);
     });
+
+    const current_user = JSON.parse(atob(localStorage.getItem("current_user")));
+
+    if(current_user.active){
+      document.getElementById("homelogin").style.display = "none";
+    }else{
+      document.getElementById("homelogin").style.display = "block";
+    }
   </script>
 
 </body>

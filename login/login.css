@@ -4,16 +4,26 @@
     padding: 0;
     box-sizing: border-box;
   }
-  
+
+  .logo img{
+    position: absolute;
+    box-shadow: 2px 2px 20px cyan;
+    border-radius: 50%;
+    top: 10px; /* Adjust for vertical positioning */
+    left: 10px; /* Adjust for horizontal positioning */
+    width: 50px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+}
   body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #1a73e8, #0b8457);
+    background: linear-gradient(to right, #1a73e8, #25bbf2);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-attachment: fixed;
     color: #fff;
+    background-image: url("pexels-dana-tentis-118658-370799.jpg");
   }
   
   .container {
@@ -75,10 +85,6 @@
     transition: border-color 0.3s;
   }
   
-  .textbox input::placeholder{
-    color: white;
-  }
-
   .textbox input:focus {
     border-color: #0b8457;
   }
@@ -86,7 +92,7 @@
   .btn {
     width: 100%;
     padding: 12px;
-    background-color: #0b8457;
+    background-color: #e1c730;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -97,7 +103,7 @@
   }
   
   .btn:hover {
-    background-color: #0a6d4b;
+    background-color: #1bcb33;
   }
   
   .bottom-links {
@@ -112,7 +118,7 @@
   }
   
   .bottom-links a:hover {
-    color: #0b8457;
+    color: #9015ce;
   }
   
   /* Responsive adjustments */

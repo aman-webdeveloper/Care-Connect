@@ -241,6 +241,7 @@ main {
   cursor: pointer;
   border-radius: 5px;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .buttons .one:hover,
@@ -610,37 +611,37 @@ main {
 }
 
 .service-1 {
-  background-image: url("/MAIN-CODE/images/appointnment-scheduling.png");
+  background-image: url("./images/appointnment-scheduling.png");
   background-size: contain;
   background-position: center;
 }
 
 .service-2 {
-  background-image: url("/MAIN-CODE/images/medical-record.png");
+  background-image: url("./images/medical-record.png");
   background-size: contain;
    background-position: center;
 }
 
 .service-3 {
-  background-image: url("/MAIN-CODE/images/find-a-clinic.png");
+  background-image: url("./images/find-a-clinic.png");
   background-size: contain;
   background-position: center;
 }
 
 .service-4 {
-  background-image: url("/MAIN-CODE/images/billing.jpg");
+  background-image: url("./images/find-a-clinic.png");
   background-size: contain;
   background-position: center;
 }
 
 .service-5 {
-  background-image: url("/MAIN-CODE/images/precription-managment.png");
+  background-image: url("./images/precription-managment.png");
   background-size: contain;
   background-position: center;
 }
 
 .service-6 {
-  background-image: url("/MAIN-CODE/images/virtual-helath.png");
+  background-image: url("./images/virtual-helath.png");
   background-size: contain;
   background-position: center;
 }
